@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, DialogOverviewExampleDialog } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
@@ -37,9 +38,12 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
+  //only declarations
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogOverviewExampleDialog
   ],
+  //only plugins
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -77,7 +81,11 @@ import { FormsModule } from '@angular/forms';
     MatPaginatorModule,
     FormsModule
   ],
+  exports: [
+    //either of plugins or components
+  ],
   providers: [],
+  entryComponents: [DialogOverviewExampleDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

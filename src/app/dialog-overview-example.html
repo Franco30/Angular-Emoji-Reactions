@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Hi {{data.name}}</h1>
+<div class="modalemoji">
+  <img src="{{data.gif}}" alt="" width="80px">
+</div>
+<div mat-dialog-content>
+  <p>What's your reply?</p>
+
+  <!-- <mat-form-field>
+    <mat-label>Favorite Gif</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field> -->
+
+  <mat-form-field>
+    <mat-label>Select Emoji</mat-label>
+    <mat-select [(ngModel)]="data.regalo" (selectionChange)="getEmoji2($event.value)">
+      <mat-option *ngFor="let emoji2 of emojis2" [value]="emoji2.gif2" class="react">
+        <img src="{{emoji2.gif2}}" alt="emojiss" width="40px" /> &nbsp; {{emoji2.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.regalo" cdkFocusInitial>Send</button>
+</div>

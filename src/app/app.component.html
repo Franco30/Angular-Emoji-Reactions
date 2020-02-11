@@ -1,35 +1,35 @@
-<!-- <mat-form-field>
-  <mat-label>Favorite food</mat-label>
-  <mat-select placeholder="Transaction Type" (change)="selected($event)">
-    <mat-option value="Like">
-    <img src="assets/emoji/thumbs_up.gif" width="40" style="margin-top: 20px;">
-    </mat-option>
-    <mat-option value="Haha">
-    <img src="assets/emoji/face_with_tears_of_joy.gif" width="40" style="margin-top: 20px;"> 
-    </mat-option>
-    <mat-option value="Heart">
-    <img src="assets/emoji/sparkling_heart.gif" width="40" style="margin-top: 20px;"> 
-    </mat-option>
-    <mat-option value="Wow">
-    <img src="assets/emoji/hushed_face.gif" width="40" style="margin-top: 20px;"> 
-    </mat-option>
-    <mat-option value="Angry">
-    <img src="assets/emoji/pouting_face.gif" width="40" style="margin-top: 20px;"> 
-    </mat-option>
-    <mat-option value="Sad">
-    <img src="assets/emoji/crying_face.gif" width="40" style="margin-top: 20px;"> 
-    </mat-option>
-  </mat-select>
-</mat-form-field> -->
-
 <h4>Basic mat-select</h4>
 <mat-form-field>
-  <mat-label>Favorite food</mat-label>
+  <mat-label>Select Reaction</mat-label>
   <mat-select [(ngModel)]="value" (selectionChange)="getEmoji($event.value)">
-    <mat-option *ngFor="let emoji of emojis" [value]="emoji.value" class="reaction">
-      <img src="{{emoji.gif}}" alt="emojis" width="40px" /> {{emoji.value}}
+    <mat-option *ngFor="let emoji of emojis" [value]="emoji.gif" class="reaction">
+      <img src="{{emoji.gif}}" alt="emojis" width="40px" /> &nbsp; {{emoji.react}}
     </mat-option>
   </mat-select>
 </mat-form-field>
 
-<h3>Your Reaction is: {{value}}</h3>
+<h3>
+  Your Reaction is: 
+  <div class="emoji">
+    <img src="{{value}}" alt="" width="80px">
+  </div>
+</h3>
+
+<ol>
+  <li>
+    <mat-form-field>
+      <mat-label>Receiver's Name?</mat-label>
+      <input matInput [(ngModel)]="name2">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Send</button>
+  </li>
+  <li *ngIf="regalo">
+    Your Reply: 
+    <!-- <i>{{regalo}}</i> -->
+    <div class="emoji">
+    <i><img src="{{regalo}}" alt="" width="80px" (click)="openDialog()"></i>
+    </div>
+  </li>
+</ol>
