@@ -1,0 +1,12 @@
+<div class="modalemoji">
+  <img src="{{data.gift}}" alt="" width="80px">
+</div>
+<div mat-dialog-content>
+  <p>My Reaction</p>
+
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="NoClick()">Close</button>
+  <button mat-button [mat-dialog-close]="data.regalo" cdkFocusInitial>Send</button>
+</div>

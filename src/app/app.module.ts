@@ -36,12 +36,14 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   //only declarations
   declarations: [
     AppComponent,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialog,
+    ModalComponent
   ],
   //only plugins
   imports: [
@@ -85,7 +87,7 @@ import { FormsModule } from '@angular/forms';
     //either of plugins or components
   ],
   providers: [],
-  entryComponents: [DialogOverviewExampleDialog],
+  entryComponents: [DialogOverviewExampleDialog, ModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

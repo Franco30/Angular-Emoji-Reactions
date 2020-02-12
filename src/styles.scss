@@ -35,3 +35,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .modalemoji:hover {
     transform: scale(1.2); 
   }
+
+  .gift {
+    transition: transform .2s ease-in;
+  }
+
+  .gift:hover {
+    transform: scale(1.2);
+  }
+
+  .table tr {
+    cursor: pointer;
+}
