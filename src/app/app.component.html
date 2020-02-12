@@ -1,3 +1,24 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="toolbar">
+    <div class="logot">
+    <img src="../assets/logo/pltrades.svg" alt="pltradeswhite" style="width: 160px;" />
+  </div>
+  <div class="logot2">
+    <button mat-button><mat-icon class="horizontal-menu-icon mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">search</mat-icon></button>
+    <button mat-button><mat-icon class="horizontal-menu-icon mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">notificationss</mat-icon></button>
+    <button mat-button><mat-icon class="horizontal-menu-icon mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">account_circle</mat-icon></button>
+  </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="toolbar2">
+    <div class="font-toolbar">
+    <button mat-button><mat-icon class="horizontal-menu-icon mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">group</mat-icon> Traders</button>
+    <button mat-button><mat-icon class="horizontal-menu-icon mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">input</mat-icon> Trade Records</button>
+    <button mat-button><mat-icon class="horizontal-menu-icon mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">remove_red_eye</mat-icon> Trade Plan</button>
+    <button mat-button><mat-icon class="horizontal-menu-icon mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">collections_bookmark</mat-icon> Strategies Rules</button>
+     </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
 <h4>Basic mat-select</h4>
 <mat-form-field>
   <mat-label>Select Reaction</mat-label>
@@ -9,7 +30,7 @@
 </mat-form-field>
 
 <h3>
-  Your Reaction is: 
+  Your Reaction is:
   <div class="emoji">
     <img src="{{value}}" alt="" width="80px">
   </div>
@@ -26,10 +47,10 @@
     <button mat-raised-button (click)="openDialog()">Send</button>
   </li>
   <li *ngIf="regalo">
-    Your Reply: 
+    Your Reply:
     <!-- <i>{{regalo}}</i> -->
     <div class="emoji">
-    <i><img src="{{regalo}}" alt="" width="80px" (click)="openDialog()"></i>
+      <i><img src="{{regalo}}" alt="" width="80px" (click)="openDialog()"></i>
     </div>
   </li>
 </ol>
@@ -43,18 +64,19 @@
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> No. </th>
     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-  </ng-container>        
+  </ng-container>
 
   <!-- Position Column -->
   <ng-container matColumnDef="emojiname">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <th mat-header-cell *matHeaderCellDef> Name </th>
     <td mat-cell *matCellDef="let element"> {{element.emojiname}} </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="gift">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element"><img src="{{element.gift}}" alt="" width="50px" (click)="openModal(element.gift);" class="gift"> </td>
+    <th mat-header-cell *matHeaderCellDef> Reaction </th>
+    <td mat-cell *matCellDef="let element"><img src="{{element.gift}}" alt="" width="40px"
+        (click)="openModal(element.gift);" class="gift"> </td>
   </ng-container>
 
 

@@ -3,7 +3,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 .reaction:hover {
     transform: scale(1.2);
@@ -47,3 +47,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .table tr {
     cursor: pointer;
 }
+
+  .toolbar {
+    background: #00695c;
+  }
+
+  .toolbar2 {
+    background: #004d40!important;
+  }
+
+  .font-toolbar {
+    margin: auto;
+  }
+
+  .logot {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .logot2 {
+    float: right;
+    margin: 0 auto;
+  }
